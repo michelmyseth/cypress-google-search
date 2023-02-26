@@ -6,7 +6,7 @@ module.exports = defineConfig({
             // implement node event listeners here
         },
         env: {
-            BASE_URL: "https://google.fr",
+            BASE_URL: "https://google.com",
         },
         chromeWebSecurity: false,
     },

@@ -1,15 +1,29 @@
 import "cypress-plugin-xhr-toggle";
 
 describe("google search", () => {
-    it("should display three first title", () => {
+    beforeEach(() => {
         cy.visit(Cypress.env("BASE_URL"));
         cy.get("#L2AGLb").click();
         cy.get('input[name="q"]').type("vadesecure");
-        cy.get("form").submit();
+        cy.get('input[value="Recherche Google"]').first().click();
+    });
+
+    it("should display three first title", () => {
         cy.get("#search a h3").then((title) => {
-            for (let i = 0; i < 3; i++) {
-                cy.log(`${i + 1} title result : ${title[i].innerText}`);
-            }
+            cy.log(`1 title result : ${title[0].innerText}`);
+            cy.get("#search .g.Ww4FFb a h3").then((title) => {
+                for (let i = 0; i < 2; i++) {
+                    cy.log(`${i + 2} title result : ${title[i].innerText}`);
+                    console.log(title);
+                }
+            });
+        });
+    });
+
+    it("expect first title to no equal les plus beaux", () => {
+        cy.get("#search a h3").then((title) => {
+            const firstTitle = title[0].innerText;
+            expect(firstTitle).not.equal("les plus beaux");
         });
     });
 });
