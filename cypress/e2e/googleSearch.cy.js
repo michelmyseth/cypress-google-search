@@ -20,7 +20,7 @@ describe("google search", () => {
         });
     });
 
-    it("expect first title to no equal les plus beaux", () => {
+    it("expect first title to not equal les plus beaux", () => {
         cy.get("#search a h3").then((title) => {
             const firstTitle = title[0].innerText;
             expect(firstTitle).not.equal("les plus beaux");
