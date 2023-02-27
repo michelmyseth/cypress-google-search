@@ -66,7 +66,7 @@ J'effectue un clic pour passer la modale.
 
 Pour effectuer une recherche, j'ai utilisé le sélecteur input avec le paramètre [name="q"] à la place d'une classe pour éviter les possibles changements de classe qui pourraient nuire au fonctionnement du test si changement réalisé dans le code.
 
-Par la suite j'ai utilisé la méthode submit pour soumettre ma recherche.
+Par la suite j'ai utilisé input[value="Recherche Google"]' pour soumettre la recherche.
 
 4. ## Résultat de recherche et affichage
 
