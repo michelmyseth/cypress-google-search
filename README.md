@@ -39,6 +39,9 @@ Bonus: comparer le titre du premier résultat et la chaine de caractères "les p
 
 Rédaction scénario gherkin par rapport à l'énoncé du test :
 
+voir fichier googleSearch.feature qui se situe dans : cypress/google_search/cypress/e2e
+
+
 -   visiter la page google.com
 -   entrer le texte "vadesecure" dans la barre de recherche
 -   valider
