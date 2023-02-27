@@ -14,7 +14,6 @@ describe("google search", () => {
             cy.get("#search .g.Ww4FFb a h3").then((title) => {
                 for (let i = 0; i < 2; i++) {
                     cy.log(`${i + 2} title result : ${title[i].innerText}`);
-                    console.log(title);
                 }
             });
         });
